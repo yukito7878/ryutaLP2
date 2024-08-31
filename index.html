@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .container {
+            margin: 20px;
+        }
+        .talent-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .talent-item {
+            background-color: white;
+            width: 18%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .talent-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .talent-info {
+            padding: 10px;
+        }
+        .talent-info h3 {
+            margin: 0 0 10px;
+        }
+        .talent-info p {
+            margin: 0;
+            color: #666;
+        }
+        .line-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Talent</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="talent-list">
+            <div class="talent-item">
+                <img src="img/ryuta.jpg" alt="Talent 1">
+                <div class="talent-info">
+                    <h3>Talent 1</h3>
+                    <p>Description of talent 1.</p>
+                </div>
+                <a href="https://line.me/" target="_blank">
+                    <img src="line-icon.png" alt="Line" class="line-icon">
+                </a>
+            </div>
+            <div class="talent-item">
+                <img src="img/rito.jpg" alt="Talent 2">
+                <div class="talent-info">
+                    <h3>Talent 2</h3>
+                    <p>Description of talent 2.</p>
+                </div>
+                <a href="https://line.me/" target="_blank">
+                    <img src="line-icon.png" alt="Line" class="line-icon">
+                </a>
+            </div>
+            <div class="talent-item">
+                <img src="img/yukitoKensei.jpg" alt="Talent 3">
+                <div class="talent-info">
+                    <h3>Talent 3</h3>
+                    <p>Description of talent 3.</p>
+                </div>
+                <a href="https://line.me/" target="_blank">
+                    <img src="line-icon.png" alt="Line" class="line-icon">
+                </a>
+            </div>
+            <div class="talent-item">
+                <img src="img/daiki.jpg" alt="Talent 4">
+                <div class="talent-info">
+                    <h3>Talent 4</h3>
+                    <p>Description of talent 4.</p>
+                </div>
+                <a href="https://line.me/" target="_blank">
+                    <img src="line-icon.png" alt="Line" class="line-icon">
+                </a>
+            </div>
+            <div class="talent-item">
+                <img src="img/gano.jpg" alt="Talent 5">
+                <div class="talent-info">
+                    <h3>Talent 5</h3>
+                    <p>Description of talent 5.</p>
+                </div>
+                <a href="https://line.me/" target="_blank">
+                    <img src="line-icon.png" alt="Line" class="line-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Talent Agency. All rights reserved.</p>
+    </footer>
+</body>
+</html>
