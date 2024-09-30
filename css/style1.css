@@ -1,0 +1,269 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Serif+JP:wght@400;700&display=swap'); /* Poppins for general text, Noto Serif JP for elegant text */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif JP', serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s; /* スクロール時のスムーズなアニメーション */
+}
+
+
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;      /* 横方向に中央揃え */
+    align-items: center;          /* 縦方向に中央揃え */
+    justify-content: space-between;
+}
+
+.container h1{
+	display: flex;      /* 横方向に中央揃え */
+    align-items: center;          /* 縦方向に中央揃え */
+    padding: 0 0 0 5%;
+}
+
+.logo img {
+    width: 350px;
+    height: auto;
+    max-width: 50%;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 20px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #FF85B3;
+}
+
+/* ハンバーガーメニューのスタイル */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding-right: 5%;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* 800px以下でのレスポンシブ対応 */
+@media (max-width: 800px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav.active ul {
+        display: flex;
+    }
+}
+
+/* Talent Section */
+.talent-section {
+    position: relative;
+    padding: 40px 20px;
+    background-color: #fff;
+    background-image: url('../img/background1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: #333;
+    line-height: 1.6;
+    z-index: 1; /* 背景セクションを後ろに配置 */
+}
+
+.talent-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.talent-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* セクションタイトル */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* タレントコンテナ */
+.talent-container {
+    display: flex; /* Flexboxでレイアウト */
+    flex-wrap: wrap; /* 要素が折り返されるように設定 */
+    justify-content: center; /* 中央揃え */
+    gap: 20px; /* 要素間のスペースを追加 */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.talent {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.7s ease-out, transform 0.3s ease-out;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* 初期状態は非表示 */
+    transform: translateY(20px); /* 初期状態で少し下にずらす */
+}
+
+.talent.show {
+    opacity: 1; /* 表示 */
+    transform: translateY(0); /* 元の位置に戻す */
+}
+
+
+.talent:hover {
+    transform: scale(1.05); /* ホバー時に拡大 */
+}
+
+/* 名前の表示 */
+.talent .name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+}
+
+/* SNSアイコン */
+.socialIcons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.socialIcons a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.socialIcons a:hover {
+    transform: scale(1.1); /* ホバー時に拡大 */
+}
+
+.socialIcons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* スクリーンサイズに応じてレスポンシブに変化 */
+@media (max-width: 1200px) {
+    .talent-container {
+        justify-content: space-around; /* 大画面ではスペースを取る */
+    }
+}
+
+@media (max-width: 768px) {
+    .talent-container {
+        flex-direction: row; /* 要素を一列で並べる */
+    }
+    .talent {
+        width: 40%; /* カードの幅を調整 */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .talent-container {
+        flex-direction: row; /* 要素を一列で縦に並べる */
+        
+    }
+    .talent {
+        width: 45%; /* カードの幅をフルに */
+        margin: 0 auto 20px auto;
+    }
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.footer p {
+    font-size: 1rem;
+    font-weight: 400;
+}
